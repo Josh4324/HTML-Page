@@ -36,7 +36,7 @@ header{
     margin-top:10px;
     padding: 0px 10px 10px 30px;
     display: inline-block;
-    width:70%;
+    width:60%;
 }
 
 .pitch{
@@ -45,7 +45,7 @@ header{
 }
 
 .img{
-    width:30%;
+    
     display: inline-block;
     margin-top:100px;
     margin-left:100px;
@@ -53,4 +53,45 @@ header{
 
 .bold{
     font-weight: bold;
+}
+
+.formdiv{
+    display:inline-block;
+    width:40%;
+}
+
+.form-head{
+    text-align:center;
+}
+
+.form{
+    margin-left: 100px;
+    margin-bottom:30px;
+}
+
+input[type=text], input[type=password], input[type=email], textarea {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width:80%;
+    border-radius: 5px;
+  }
+
+  #button{
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width:80%;
+    background-color: #e797b1;
+  }
+
+.err{
+    width:80%;
+    color:white;
+    background-color:red;
+    border-radius: 5px;
 }
