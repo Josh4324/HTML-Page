@@ -147,10 +147,18 @@
         }
         
     }
-
+    
+    const check = () => {
+        validateEmail()
+        validateMsg()
+        
+    }
+        
+ 
 
     email.addEventListener("blur", validateEmail)
     message.addEventListener("blur", validateMsg)
+    button.addEventListener("click", check)
 
 
     </script>
