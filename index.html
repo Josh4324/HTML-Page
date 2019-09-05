@@ -124,7 +124,6 @@
 
     const validateEmail = (evt) => {
         if (emailregex.test(email.value) === false){
-            email.focus()
             emailerr.classList = "err"
             emailerr.textContent = "Please write the Email in the appropriate format"
         }
@@ -138,7 +137,6 @@
 
     const validateMsg = () => {
         if (msgregex.test(message.value) === false){
-            message.focus()
             msgerr.classList = "err"
             msgerr.textContent = "Please write a minimum of 20 characters and should contain letters only"
         }else{
