@@ -112,6 +112,7 @@
         </div>
     </div>
     <script>
+    let value = false;
     const email = document.querySelector("#email")
     const emailerr = document.querySelector("#email-error")
     const message = document.querySelector("#message")
@@ -126,6 +127,7 @@
         if (emailregex.test(email.value) === false){
             emailerr.classList = "err"
             emailerr.textContent = "Please write the Email in the appropriate format"
+            value = true;
         }
         
         else{
@@ -139,6 +141,7 @@
         if (msgregex.test(message.value) === false){
             msgerr.classList = "err"
             msgerr.textContent = "Please write a minimum of 20 characters and should contain letters only"
+            value = true;
         }else{
             msgerr.classList.remove("err")
             msgerr.textContent = ""
@@ -149,7 +152,10 @@
     const check = () => {
         validateEmail()
         validateMsg()
-        email.focus()
+        if(value === true){
+            email.focus()
+        }
+        
     }
         
  
