@@ -163,9 +163,9 @@
     const check = (evt) => {
         validateEmail()
         validateMsg()
-        evt.preventDefault()
-        if (value === false){
-            form.reset()
+        if (value === true){
+            console.log(true)
+            evt.preventDefault()
         }
     }
         
