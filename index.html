@@ -163,8 +163,9 @@
     const check = (evt) => {
         validateEmail()
         validateMsg()
-        evt.preventDefault()
-       
+        if (value === true){
+            evt.preventDefault()
+        }
     }
         
  
