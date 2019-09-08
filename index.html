@@ -121,45 +121,59 @@
         </div>
     </div>
     <script>
+    let value = false;
     const email = document.querySelector("#email")
     const emailerr = document.querySelector("#email-error")
     const message = document.querySelector("#message")
     const msgerr = document.querySelector("#msg-error")
     const button = document.querySelector("#button")
     const emailregex = /^[a-zA-Z]+@[a-zA-Z]+.com$/
-    const msgregex = /^[a-zA-Z]{20,}$/
+    const msgregex =  /[a-z A-Z]{20,}/
     const form = document.querySelector(".form")
 
 
     const validateEmail = (evt) => {
         if (emailregex.test(email.value) === false){
-            email.focus()
             emailerr.classList = "err"
             emailerr.textContent = "Please write the Email in the appropriate format"
+            value = true;
         }
         
         else{
             emailerr.classList.remove("err")
             emailerr.textContent = ""
+            value = false;
         }
 
     }
 
     const validateMsg = () => {
         if (msgregex.test(message.value) === false){
-            message.focus()
             msgerr.classList = "err"
             msgerr.textContent = "Please write a minimum of 20 characters and should contain letters only"
+            value = true;
         }else{
             msgerr.classList.remove("err")
             msgerr.textContent = ""
+            value = false;
         }
         
     }
-
+    
+    const check = (evt) => {
+        validateEmail()
+        validateMsg()
+        evt.preventDefault()
+        if (value === false){
+            form.reset()
+        }
+    }
+        
+ 
 
     email.addEventListener("blur", validateEmail)
     message.addEventListener("blur", validateMsg)
+    button.addEventListener("click", check)
 
 
     </script>
